@@ -27,7 +27,7 @@ export default function Navbar() {
             <Printer className="h-6 w-6 text-primary" />
           </div>
           <span className="font-display font-bold text-xl tracking-tight">
-            D TONE ENTERPRISES
+           MiCROTONE
           </span>
         </Link>
 
