@@ -27,15 +27,16 @@ export default function Hero() {
               </span>
               New Laser Series Available
             </div> */}
-            
+
             <h1 className="text-5xl lg:text-7xl font-bold font-display leading-[1.1] mb-6 tracking-tight bg-linear-to-r from-white via-white/90 to-white/50 bg-clip-text text-transparent">
-              Precision Printing for Professionals
+              MicroTone Enterprises
             </h1>
-            
+
             <p className="text-lg text-muted-foreground mb-8 max-w-xl leading-relaxed">
-              Experience the future of office productivity with our next-generation laser printers and premium supplies. Engineered for reliability, designed for speed.
+              Microtone supplies high-quality toner cartridges, toner powder, ink bottles, and printer accessories.
+              We deliver reliable, affordable printing solutions with a strong focus on customer satisfaction.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4">
               <Link href="/products">
                 <Button size="lg" className="h-12 px-8 text-base font-semibold bg-primary text-primary-foreground hover:bg-primary/90 hover:scale-105 transition-all duration-300">
@@ -58,9 +59,9 @@ export default function Hero() {
           >
             <div className="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl shadow-primary/10 bg-card/50 backdrop-blur-sm group">
               <div className="absolute inset-0 bg-linear-to-tr from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              <img 
-                src={heroImage} 
-                alt="Modern Laser Printer" 
+              <img
+                src={heroImage}
+                alt="Modern Laser Printer"
                 className="w-full h-auto rounded-lg transform transition-transform duration-700 group-hover:scale-105"
               />
             </div>
