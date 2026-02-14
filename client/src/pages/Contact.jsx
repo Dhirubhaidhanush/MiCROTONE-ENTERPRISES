@@ -9,12 +9,17 @@ export default function Contact() {
     message: "",
   });
 
+  const [loading, setLoading] = useState(false);
+
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    if (loading) return;
+    setLoading(true);
 
     try {
       const res = await fetch("/api/contact", {
@@ -28,16 +33,23 @@ export default function Contact() {
         }),
       });
 
-      const data = await res.json();
-      console.log("Response:", data);
-
-      alert("Message sent successfully");
+      if (res.ok) {
+        alert("Message sent successfully");
+        setForm({
+          fullName: "",
+          email: "",
+          phone: "",
+          message: "",
+        });
+      } else {
+        alert("Something went wrong");
+      }
     } catch (err) {
-      console.error("Failed to send message", err);
+      console.error(err);
+      alert("Server error");
     }
 
-    setForm({ fullName: "", email: "", phone: "", message: "" });
-    alert("Message sent successfully");
+    setLoading(false);
   };
 
   return (
@@ -152,10 +164,12 @@ export default function Contact() {
             {/* BUTTON */}
             <button
               type="submit"
-              className="w-full mt-4 bg-blue-600 hover:bg-blue-700 transition text-white font-medium py-3 rounded-lg"
+              disabled={loading}
+              className="w-full mt-4 bg-blue-600 hover:bg-blue-700 transition text-white font-medium py-3 rounded-lg disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              Send Message
+              {loading ? "Sending..." : "Send Message"}
             </button>
+
           </div>
         </form>
       </div>
