@@ -103,7 +103,7 @@ export default function Home() {
               <p className="text-muted-foreground">Hand-picked best sellers for this month.</p>
             </div>
             <Link href="/products">
-              <Button variant="ghost" className="hidden md:flex group">
+              <Button variant="ghost" className="hidden cursor-pointer md:flex group">
                 View All Products <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
               </Button>
             </Link>
