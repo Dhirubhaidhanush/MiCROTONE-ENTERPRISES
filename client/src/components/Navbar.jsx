@@ -1,5 +1,5 @@
 import { Link, useLocation } from "wouter";
-import { Printer, Menu } from "lucide-react";
+import { Menu } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
@@ -22,17 +22,17 @@ export default function Navbar() {
         <Link href="/" className="flex items-center gap-2 group">
           <span
             className="
-    text-[28px]
-    font-[Orbitron]
-    tracking-[0.25em]
-    font-bold
-    bg-linear-to-r from-cyan-300 via-white to-blue-400
-    bg-clip-text text-transparent
-    logo-shine
-    drop-shadow-[0_0_15px_rgba(56,189,248,0.8)]
-    group-hover:drop-shadow-[0_0_30px_rgba(56,189,248,1)]
-    transition duration-500
-  "
+            text-[28px]
+            font-[Orbitron]
+            tracking-[0.25em]
+            font-bold
+            bg-linear-to-r from-cyan-300 via-white to-blue-400
+            bg-clip-text text-transparent
+            logo-shine
+            drop-shadow-[0_0_15px_rgba(56,189,248,0.8)]
+            group-hover:drop-shadow-[0_0_30px_rgba(56,189,248,1)]
+            transition duration-500
+          "
           >
             MICROTONE
           </span>
@@ -44,10 +44,16 @@ export default function Navbar() {
             <Link
               key={link.href}
               href={link.href}
-              className={`text-sm font-medium transition-colors hover:text-primary ${location === link.href
-                ? "text-primary"
-                : "text-muted-foreground"
-                }`}
+              className={`
+              text-sm
+              font-semibold
+              tracking-[0.15em]
+              bg-linear-to-r from-cyan-300 via-white to-blue-400
+              bg-clip-text text-transparent
+              transition-all duration-300
+              hover:drop-shadow-[0_0_20px_rgba(56,189,248,0.9)]
+              ${location === link.href ? "opacity-100" : "opacity-70 hover:opacity-100"}
+              `}
             >
               {link.label}
             </Link>
@@ -72,7 +78,15 @@ export default function Navbar() {
                   <Link
                     key={link.href}
                     href={link.href}
-                    className="text-lg font-medium hover:text-primary transition-colors"
+                    className="
+                    text-lg
+                    font-semibold
+                    tracking-[0.15em]
+                    bg-linear-to-r from-cyan-300 via-white to-blue-400
+                    bg-clip-text text-transparent
+                    hover:drop-shadow-[0_0_20px_rgba(56,189,248,0.9)]
+                    transition-all duration-300
+                    "
                     onClick={() => setIsOpen(false)}
                   >
                     {link.label}
@@ -82,6 +96,7 @@ export default function Navbar() {
             </SheetContent>
           </Sheet>
         </div>
+
       </div>
     </nav>
   );
