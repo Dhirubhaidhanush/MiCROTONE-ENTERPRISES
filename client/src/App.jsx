@@ -8,6 +8,7 @@ import NotFound from "@/pages/NotFound";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Contact from "@/pages/Contact";
+import WhatsappButton from "./components/WhatsappButton";
 
 function Router() {
   return (
@@ -29,6 +30,7 @@ function App() {
           <Router />
         </main>
         <Footer />
+        <WhatsappButton/>
         <Toaster />
       </div>
     </QueryClientProvider>
