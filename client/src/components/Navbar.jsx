@@ -71,7 +71,7 @@ export default function Navbar() {
 
             <SheetContent
               side="right"
-              className="w-75 sm:w-100 border-l border-white/10 bg-card/95 backdrop-blur-xl"
+              className="w-[300px] sm:w-[400px] border-l border-white/10 bg-card/95 backdrop-blur-xl"
             >
               <div className="flex flex-col gap-6 mt-8">
                 {links.map((link) => (
