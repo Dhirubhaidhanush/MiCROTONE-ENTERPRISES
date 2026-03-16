@@ -1,10 +1,50 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
-@plugin "tailwindcss-animate";
+/* Base styles */
 
-/* Theme variables */
-@theme inline {
+* {
+  border-color: hsl(217 19% 27%);
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: hsl(222 47% 11%);
+  color: hsl(210 40% 98%);
+}
+
+/* Headings */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Outfit', sans-serif;
+  letter-spacing: -0.01em;
+}
+
+/* Logo Shine Animation */
+
+@keyframes shine {
+  0% {
+    background-position: -200px;
+  }
+  100% {
+    background-position: 200px;
+  }
+}
+
+.logo-shine {
+  background-size: 200% auto;
+  animation: shine 3s linear infinite;
+}
+
+
+/* Old Code */
+/* @import "tailwindcss";
+@import "tw-animate-css";
+
+@plugin "tailwindcss-animate"; */
+/* 
+Theme variables */
+/* @theme inline {
   --color-background: hsl(222 47% 11%);
   --color-foreground: hsl(210 40% 98%);
   
@@ -39,9 +79,9 @@
 
   --font-sans: 'Inter', sans-serif;
   --font-display: 'Outfit', sans-serif;
-}
+} */
 
-@layer base {
+/* @layer base {
   * {
     border-color: hsl(217 19% 27%);
   }
@@ -56,19 +96,19 @@
     font-family: var(--font-display);
     letter-spacing: -0.01em;
   }
-}
+} */
 
 /* Logo shine animation */
-@keyframes shine {
+/* @keyframes shine {
   0% {
     background-position: -200px;
   }
   100% {
     background-position: 200px;
   }
-}
+} */
 
-.logo-shine {
+/* .logo-shine {
   background-size: 200% auto;
   animation: shine 3s linear infinite;
-}
+} */
