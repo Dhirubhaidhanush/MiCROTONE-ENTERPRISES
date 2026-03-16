@@ -26,27 +26,25 @@ function Router() {
 function App() {
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 3000);
-
-    return () => clearTimeout(timer);
-  }, []);
-
   return (
     <QueryClientProvider client={queryClient}>
-      {loading && <IntroLoader />}
 
-      <div className="min-h-screen flex flex-col bg-background text-foreground font-sans">
-        <Navbar />
-        <main className="grow">
-          <Router />
-        </main>
-        <Footer />
-        <WhatsappButton />
-        <Toaster />
-      </div>
+      {loading ? (
+        <IntroLoader onFinish={() => setLoading(false)} />
+      ) : (
+        <div className="min-h-screen flex flex-col bg-background text-foreground font-sans">
+          <Navbar />
+
+          <main className="grow">
+            <Router />
+          </main>
+
+          <Footer />
+          <WhatsappButton />
+          <Toaster />
+        </div>
+      )}
+
     </QueryClientProvider>
   );
 }
