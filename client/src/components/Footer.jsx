@@ -8,7 +8,7 @@ export default function Footer() {
           <div>
             <div className="flex items-center gap-2 mb-6">
               <Printer className="h-6 w-6 text-primary" />
-              <span className="font-display font-bold text-xl tracking-tight text-white">MiCROTONE ENTERPRISES</span>
+              <span className="font-display font-bold text-xl tracking-tight text-white">MICROTONE ENTERPRISES</span>
             </div>
             <p className="text-muted-foreground leading-relaxed mb-6">
               Providing top-tier printing solutions for modern businesses. Quality, speed, and reliability in every print.
