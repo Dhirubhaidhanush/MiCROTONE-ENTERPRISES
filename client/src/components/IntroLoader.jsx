@@ -14,19 +14,19 @@ export default function IntroLoader({ onFinish }) {
   };
 
   return (
-    <div className="fixed inset-0 bg-black flex flex-col items-center justify-center z-9999">
+    <div className="fixed inset-0 bg-black flex flex-col items-center justify-center z-[9999]">
 
       {/* Printer Container */}
       <div className="relative flex flex-col items-center">
 
         {/* Paper */}
         <motion.div
-          className="absolute top-22.5 w-[320px] h-55 bg-white rounded-sm shadow-xl flex flex-col items-center justify-start text-center pt-16"
+          className="absolute top-[90px] w-[320px] h-[220px] bg-white rounded-sm shadow-xl flex flex-col items-center justify-start text-center pt-16"
           initial={{ y: 0, opacity: 0 }}
           animate={
             printing
               ? {
-                  y: 320,      // paper fully comes out
+                  y: 320,
                   opacity: 1
                 }
               : {}
@@ -51,7 +51,7 @@ export default function IntroLoader({ onFinish }) {
         <img
           src={Printer}
           alt="Printer"
-          className="w-125 relative z-10"
+          className="w-[500px] relative z-10"
         />
 
       </div>
