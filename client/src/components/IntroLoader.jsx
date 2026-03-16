@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
-import Printer from "@/assets/Printerimage.png";
+import Printer from "../assets/Printerimage.png";
 
 export default function IntroLoader({ onFinish }) {
   const [printing, setPrinting] = useState(false);
