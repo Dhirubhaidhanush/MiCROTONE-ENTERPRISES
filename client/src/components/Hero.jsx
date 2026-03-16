@@ -36,7 +36,7 @@ export default function Hero() {
               <Link href="/products">
                 <Button
                   size="lg"
-                  className="h-12 px-8 text-base font-semibold bg-primary text-primary-foreground hover:bg-primary/90 hover:scale-105 transition-all duration-300"
+                  className="h-12 px-8 text-base cursor-pointer font-semibold bg-primary text-primary-foreground hover:bg-primary/90 hover:scale-105 transition-all duration-300"
                 >
                   Check Products
                   <ArrowRight className="ml-2 h-4 w-4" />
@@ -47,7 +47,7 @@ export default function Hero() {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="h-12 px-8 text-base font-semibold border-white/10 hover:bg-white/5 hover:text-white"
+                  className="h-12 px-8 text-base font-semibold cursor-pointer border-white/10 hover:bg-white/5 hover:text-white"
                 >
                   View Supplies
                 </Button>
