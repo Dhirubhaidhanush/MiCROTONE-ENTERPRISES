@@ -19,15 +19,22 @@ export default function Navbar() {
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
 
         {/* LOGO */}
-        <Link
-          href="/"
-          className="flex items-center gap-2 group"
-        >
-          <div className="p-2 rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-colors">
-            <Printer className="h-6 w-6 text-primary" />
-          </div>
-          <span className="font-display font-bold text-xl tracking-tight">
-           MiCROTONE
+        <Link href="/" className="flex items-center gap-2 group">
+          <span
+            className="
+    text-[28px]
+    font-[Orbitron]
+    tracking-[0.25em]
+    font-bold
+    bg-linear-to-r from-cyan-300 via-white to-blue-400
+    bg-clip-text text-transparent
+    logo-shine
+    drop-shadow-[0_0_15px_rgba(56,189,248,0.8)]
+    group-hover:drop-shadow-[0_0_30px_rgba(56,189,248,1)]
+    transition duration-500
+  "
+          >
+            MICROTONE
           </span>
         </Link>
 
@@ -37,11 +44,10 @@ export default function Navbar() {
             <Link
               key={link.href}
               href={link.href}
-              className={`text-sm font-medium transition-colors hover:text-primary ${
-                location === link.href
-                  ? "text-primary"
-                  : "text-muted-foreground"
-              }`}
+              className={`text-sm font-medium transition-colors hover:text-primary ${location === link.href
+                ? "text-primary"
+                : "text-muted-foreground"
+                }`}
             >
               {link.label}
             </Link>
@@ -80,12 +86,3 @@ export default function Navbar() {
     </nav>
   );
 }
-
-
-
-
-
-
-
-
-
