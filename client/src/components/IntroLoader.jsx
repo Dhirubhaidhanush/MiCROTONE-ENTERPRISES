@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
-import Printerimage from "../assets/Printerimage.png";
+import PrinterImage from "../assets/PrinterImage.png";
 
 export default function IntroLoader({ onFinish }) {
   const [printing, setPrinting] = useState(false);
@@ -49,7 +49,7 @@ export default function IntroLoader({ onFinish }) {
 
         {/* Printer Image */}
         <img
-          src={Printerimage}
+          src={PrinterImage}
           alt="Printer"
           className="w-[500px] relative z-10"
         />
