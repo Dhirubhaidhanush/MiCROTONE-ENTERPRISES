@@ -48,7 +48,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-white/5 pt-8 text-center text-muted-foreground text-sm">
-          <p>&copy; {new Date().getFullYear()} MiCROTONE ENTERPRISES. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} MICROTONE ENTERPRISES. All rights reserved.</p>
         </div>
       </div>
     </footer>
